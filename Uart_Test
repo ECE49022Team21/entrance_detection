@@ -1,0 +1,10 @@
+import time
+import serial
+ser = serial.Serial("/dev/ttyS0", baudrate = 9600, parity = serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS, timeout=1)
+counter = 0
+
+while counter < 21:
+    ser.write(b'Write Counter: %d \n'%(counter))
+    print("Printed")
+    time.sleep(1)
+    counter +=1
