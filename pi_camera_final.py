@@ -26,7 +26,7 @@ def marker_cam_setup():
 	arucoDict = cv2.aruco.Dictionary_get(ARUCO_DICT[args["type"]])
 	# Initialize the detector parameters - picked a working combination from millions of random examples
 	parameters =  cv2.aruco.DetectorParameters_create()
-	parameters.minDistanceToBorder =  1
+	parameters.minDistanceToBorder =  1 #d3
 	#parameters.cornerRefinementMaxIterations = 10
 	parameters.minOtsuStdDev= 1.5 #d3
 	parameters.adaptiveThreshWinSizeMin= 3 #d3
